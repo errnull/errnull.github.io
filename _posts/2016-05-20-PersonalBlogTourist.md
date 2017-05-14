@@ -172,7 +172,7 @@ http://yourName.github.io
 #### 2.CNAME 绑定域名
 
 默认使用阿里云提供的万网 DNS 服务器，点击解析。
-　在域名解析中，A 记录就是直接指定一个 IP，CNAME 就是重命名，指向另一个域名。
+在域名解析中，A 记录就是直接指定一个 IP，CNAME 就是重命名，指向另一个域名。
 <br><br>
 
 **1.** 点击添加解析
@@ -216,7 +216,8 @@ http://yourName.github.io
 ### 撰写博客
 　
 在目录结构介绍中说明过，所有的文章都在 _posts 文件夹中。 这些文件可以用 Markdown 编写， 也可以用 Textile 格式编写。
-　现在，在 _posts 下创建一个名为 FitstArticle.md 的文件，用 Markdown 开始**策马奔腾**吧！
+<br>
+现在，在 _posts 下创建一个名为 FitstArticle.md 的文件，用 Markdown 开始**策马奔腾**吧！
     
 如：
 
