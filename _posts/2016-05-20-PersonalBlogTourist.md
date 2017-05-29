@@ -146,7 +146,7 @@ $ jekyll serve
 #### 3.部署博客到刚创建仓库
 
 ```
-$ cd yourName.github.io$ cd yourName.github.io
+$ cd yourName.github.io
 $ git init
 $ git add .
 $ git commit -m "first commit"
