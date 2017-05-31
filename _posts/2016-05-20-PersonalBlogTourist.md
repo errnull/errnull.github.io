@@ -2,7 +2,7 @@
 layout: post
 title: 个人博客搭建（Jekyll + Github Page + 域名关联）
 date: 2016-05-20 
-tags: 博客   
+tags: BlogCourse   
 ---
 <br><br>
 本博客是使用 Jekyll 搭建的，以下是零基础的搭建教程。
