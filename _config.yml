@@ -10,8 +10,9 @@ url: "http://errnull.github.io"
 
 # Comment
 comment:
-     #disqus: leopard
-     duoshuo: leopard
+    # disqus: leopard
+    # duoshuo: leopard
+    # cloudTie: leopard
 
 # Social
 social:
