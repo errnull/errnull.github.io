@@ -12,8 +12,8 @@ SVGAConverter 是一款可运行在 **After Effects** & **Animate CC** 上的插
 
 ### SVGAPlayer
 
-SVGAPlayer 是 YY 开源的一个支持 iOS、Android、Web 以及 ReactNative 的动画框架，<br>
-它将每幅画卷 “精灵化”，记录动画中每个 Spirit 的运动轨迹从而避免重复渲染。<br><br>
+[SVGAPlayer]() 是 YY 开源的一个支持 iOS、Android、Web 以及 ReactNative 的动画框架，<br>
+它将每幅画卷 “精灵化”，记录动画中每个 Spirit 的运动轨迹从而避免非动画元素重复渲染。<br><br>
 
 #### **为啥要使用 SVGAPlayer**
 
@@ -22,12 +22,12 @@ SVGAPlayer 是 YY 开源的一个支持 iOS、Android、Web 以及 ReactNative �
 
 　 1. 帧动画：使用帧动画无疑是最轻松的，但是帧动画的每一帧都是一张图片，再加上不同的设备需要适配，不知不觉间 ipa 文件会变得很大，而且动画跑起来也会带来可观的内存开销。<br>
 　 2. 使用 GIF：使用 GIF 本质上跟帧动画差不多，甚至有些地方会教我们把 GIF 拆成一帧一帧去播放，GIF 本身占用空间较大，虽然现在我们可以对 GIF 动画做一些操作，但是使用成本还是挺高的。<br>
-　 3. Core Animation：CA 确实是一组非常强大的动画处理API，使用 CA 加上图片辅助确实可以实现一些动画需求，如果你想做梦还梦见自己在计算动画的话，可以继续使用它去完成你的动画需求。<br><br>
+　 3. Core Animation：CA 确实是一组非常强大的动画处理API，使用 CA 加上图片辅助确实可以实现一些动画需求，如果你想晚上睡觉还梦见自己在计算动画的话，可以继续使用它去完成你的动画需求。<br><br>
 
 在其他平台当然也会有类似问题。<br>
 
 <hr>
-使用 SVGAPlayer 上面所有的问题都会药到病除，用几句代码就可以实现复杂的动画，你会有更多的时间去写梦寐以求的 BUG 。<br><br>
+使用 SVGAPlayer 上面所有的问题都会药到病除，用几句代码就可以更高效实现复杂的动画，你会有更多的时间去写梦寐以求的 BUG 。<br><br>
 
 #### **怎么使用 SVGAPlayer**
 
@@ -65,6 +65,17 @@ SVGAPlayer Web：　　 [https://github.com/yyued/SVGAPlayer-Web](https://github
 选择 ```菜单 > 文件 > 打开``` <br>
 选择下载好的 [SVGAConverter_FL]() || [SVGAConverter_AE]() 安装包。<br>
 按照安装器指引完成安装。
+<br><br>
+
+#### **使用 SVGAConverter**
+
+按照上文说的，选择 ```菜单 > 窗口 > 扩展 > SVGAConverter``` 可以打开插件：<br><br>
+![](/images/posts/jekyll/2017-06-06-SVGAConverterCourse-04.jpg)<br>
+
+打开需要转换的文件，选择 **输出路径** > **开始转换** 稍等片刻，svga 文件就会生成在您所输出的目录并开始播放。<br>
+也可以直接点击 **选择播放文件** 直接播放本地的 ***.svga** 文件;<br>
+
+生成的 ***.svga** 文件就可以直接交给程序员哥哥们放进项目里啦。
 
 　 
 
