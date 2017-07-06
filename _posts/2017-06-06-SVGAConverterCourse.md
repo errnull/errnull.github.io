@@ -44,7 +44,7 @@ SVGAPlayer Web：　　 [https://github.com/yyued/SVGAPlayer-Web](https://github
 #### **安装 SVGAConverter**
 
 * Windows：<br>
-　 下载 windows 的专用安装器：[SVGAConverter_FL]() || [SVGAConverter_AE]();<br>
+　 下载 windows 的专用安装器：[SVGAConverter_FL](https://raw.githubusercontent.com/yyued/SVGA-FLConverter/master/windows/SVGAConverter_FL.zip) || [SVGAConverter_AE](https://raw.githubusercontent.com/yyued/SVGA-AEConverter/master/windows/SVGAConverter_AE.zip);<br>
 　 解压并且运行得到的 **install.exe** <br>
 　 ![](/images/posts/jekyll/2017-06-06-SVGAConverterCourse-01.jpg)<br>
 　 点击 **Install Now**<br>
