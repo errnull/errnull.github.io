@@ -40,5 +40,30 @@ TCP/IP 是在 IP 协议的通讯过程中，使用到的协议族的统称。<br
 <br>
 数据在各层中封装后进行传输
 ![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-01.jpg)
+<br><br>
+
+IP 协议的作用是把各种数据包传送给接收方，其中IP地址和MAC地址用于确定接收方的位置。<br>
+IP地址可以通过ARP协议 (Adress Resolution Protocol) 反查出对应的MAC地址。
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-02.jpg)
+<br><br>
+
+TCP协议能够将数据准确可靠地传输给接收方,(三次握手)。
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-03.jpg)
+<br><br>
+
+DNS服务位于应用层。它提供域名到IP地址之间的解析服务<br>
+域名易于人类理解，IP地址易于计算机理解
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-04.jpg)
+<br><br>
+
+下面是一个 HTTP 请求的总体过程：
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-05.jpg)
+<br><br>
+
+#### **·URI、URL 和 URN**
+
+**URI** 是统一资源标识符、**URL** 是统一资源定位符，而 **URN** 是统一资源名称。<br>
+URL、URN 是 URI 的子类。<br>
+
 
 
