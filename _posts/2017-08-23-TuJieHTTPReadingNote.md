@@ -21,7 +21,10 @@ HTTP (HyperText Transfer Protocol, 超文本**传输**协议) 是 Web 信息共�
 在 [IETF](https://baike.baidu.com/item/互联网工程任务组/707674?fr=aladdin&fromid=2800318&fromtitle=IETF) 的 [RFC](https://baike.baidu.com/item/RFC/1840) 中 (某组织的某文件中)<br>
 **“transport”（传输）的含义是指**：从端到端（例如从 ip1:port1 到 ip2:port2 ）可靠地搬运比特，也就是TCP/IP协议栈中的第3层传输层（transport layer）协议所做的那些事情。<br>
 **“而 transfer”（转义） 的含义是**：通过在客户端-服务器端之间转移一些带有操作语义的操作原语，来执行某种操作。<br>
-“transfer”是TCP/IP协议栈中的第4层应用层的概念，而不是第3层传输层的概念。“transfer”所转移的是带有明确操作语义的操作原语，而不是没有操作语义的比特流。<br><br>
+“transfer”是TCP/IP协议栈中的第4层应用层的概念，而不是第3层传输层的概念。“transfer”所转移的是带有明确操作语义的操作原语，而不是没有操作语义的比特流。<br>
+这里有一篇文章解释得非常好：[西门吹牛的博客](http://www.cnblogs.com/gudi/p/6959715.html)
+<br><br>
+
 HTTP 三个版本：**0.9、1.0、1.1** (更新慢)。
 <br><br>
 
