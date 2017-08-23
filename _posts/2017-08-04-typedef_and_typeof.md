@@ -65,6 +65,6 @@ iOS这块我们主要是用于枚举和Block，其他详细用途可参考：typ
 总之，细心感受它们，不要写错了
 
 <br><br><br>
-转自[简书:天空中的球](http://www.jianshu.com/p/f1c0f4aaa63a)
+> 转自[简书:天空中的球](http://www.jianshu.com/p/f1c0f4aaa63a)
 
 
