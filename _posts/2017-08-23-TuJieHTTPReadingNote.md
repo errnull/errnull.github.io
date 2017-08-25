@@ -163,6 +163,6 @@ GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。<br>
 ### 鸣谢
 
 简书：[转交遇见陈绮贞](http://www.jianshu.com/u/5a89cd7d45c9)<br>
-[51 cto ](http://www.techweb.com.cn/network/system/2016-10-11/2407736.shtml)
+文章：[51 cto ](http://www.techweb.com.cn/network/system/2016-10-11/2407736.shtml)
 
 
