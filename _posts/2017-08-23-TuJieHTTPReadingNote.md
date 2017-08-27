@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 《图解 HTTP》阅读笔记(立 flag)
+title: 《图解 HTTP》阅读笔记 一
 date: 2017-08-23 
-tags:  Internet   
+tags:  Net   
 ---
 
 <br><br>
@@ -21,7 +21,7 @@ HTTP (HyperText Transfer Protocol, 超文本**传输**协议) 是 Web 信息共�
 因为 “transport” 和 “transfer” 在中文中都具有 “传输” 的含意，之后以讹传讹贻害无穷。(摘自[百度百科](https://baike.baidu.com/item/超文本转移协议/1675080?fr=aladdin))<br><br>
 在 [IETF](https://baike.baidu.com/item/互联网工程任务组/707674?fr=aladdin&fromid=2800318&fromtitle=IETF) 的 [RFC](https://baike.baidu.com/item/RFC/1840) 中 (某组织的某文件中)<br>
 **“transport”（传输）的含义是指**：从端到端（例如从 ip1:port1 到 ip2:port2 ）可靠地搬运比特，也就是 TCP/IP 协议栈中的第3层传输层（transport layer）协议所做的那些事情。<br>
-**“而 transfer”（转义） 的含义是**：通过在客户端-服务器端之间转移一些带有操作语义的操作原语，来执行某种操作。<br>
+**“而 transfer”（转移） 的含义是**：通过在客户端-服务器端之间转移一些带有操作语义的操作原语，来执行某种操作。<br>
 “transfer” 是 TCP/IP 协议栈中的第4层应用层的概念，而不是第3层传输层的概念。“transfer” 所转移的是带有明确操作语义的操作原语，而不是没有操作语义的比特流。<br>
 这里有一篇文章解释得非常好：[西门吹牛的博客](http://www.cnblogs.com/gudi/p/6959715.html)
 <br><br>
@@ -107,8 +107,9 @@ GET 和 POST 本质上就是 TCP 链接，并无差别。但是由于 HTTP 的�
 
 #### **·In addition**
 
-GET 和 POST 还有一个重大区别，简单来说：<br>
-GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。<br>
+GET 和 POST 还有一个重大区别，<br><br>
+简单来说：<br>
+GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。<br><br>
 长的说：<br>
 对于 GET 方式的请求，浏览器会把 http header 和 data 一并发送出去，服务器响应200(返回数据);<br>
 而对于 POST，浏览器先发送 header，服务器响应 100 continue，浏览器再发送 data，服务器响应 200 ok(返回数据)。<br>
@@ -132,6 +133,7 @@ GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。<br>
 报文分为报文首部和报文主体,报文首部一般有四种：通用首部，请求首部，响应首部和实体首部；<br>
 在客户端与服务器之间进行通信过程中，无论是请求首部还是响应首部都能起到传递额外重要信息的作用，<br>
 如报文主体大小，所使用的的语言和认证信息等等。<br>
+一般通过 CPU 编码提升传输效率，也会对报文进行压缩、分割。<br>
 ![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-07.jpg)
 <br><br>
 
@@ -159,8 +161,51 @@ GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。<br>
 　Cookie：　　服务器端收到的Cookie信息(请求首部);
 <br><br>
 
+#### **·状态码**
 
-### 鸣谢
+服务器通过状态码告知客户端请求结果状态，正常、错误还是其他。<br>
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-12.jpg)
+状态码如 200 OK，以 3 位数字和原因短语组成。<br>
+数字中的第一位指定了响应类别，后两位无分类。<br><br>
+常用的状态码有：<br>
+　200 (OK): 服务器正常处理了请求;<br>
+　204 (No Content): 请求处理成功，但是没有内容返回，客户端不需要刷新;<br>
+　206 (Partial Content): 客户端进行范围请求，服务端返回部分内容;
+　<br><br>
+　304 (Not Modified): 资源未发生变动，一般浏览器会使用已经缓存过的资源;<br>
+　401 (UNauthorized): 第一次返回表示需要认证，第二次则是表示认证失败;<br>
+　403 (Forbidden): 请求资源的访问被服务器拒绝;<br>
+　404 (Not Found): 服务器上不存在请求的资源;<br>
+　500 (Internal Server Error): 服务器内部错误;
+<br><br>
+
+### HTTP 与 Web 服务器
+
+一般，在互联网上域名通过DNS服务器域名解析后映射到IP地址再访问目标网站。<br>
+由于虚拟主机的功能，在相同的IP地址下可以部署多个不同域名的Web站点，因此在发送HTTP请求时必须在Host首部内完善域名。
+<br><br>
+
+#### **通信数据的转发**
+
+**1.代理**：扮演位于服务器与客户端中间人的角色，它接受客户端的请求转发给服务器，同时也接受服务器的返回结果并转发给客户端。
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-13.jpg)
+<br>
+
+**缓存代理**：预先将服务器上的资源副本缓存在代理服务器上，当客户端对这些已经缓存过了的资源发出请求时，代理不会对服务器发出请求，而是直接返回缓存的资源。
+<br><br>
+**2.网关**：接收客户端发送过来的请求，并自行进行处理，利用网关可以将 http 请求转化为其他通讯协议，可以提高通信的安全性。
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-14.jpg)
+<br>
+
+**3.隧道**：用于保持客户端与服务器端通信连接的应用程序，会使用 SSL 等加密手段进行通信，用于保证客户端与服务器之间通信的安全。
+![](/images/posts/jekyll/2017-08-23-TuJieHTTPReadingNote-15.jpg)
+<br><br>
+第七章开始进入 HTTPS 部分，<br>
+篇幅太大，所以在下一篇文章中摊开来讲。
+
+<br><br>
+
+### 参考
 
 简书：[转交遇见陈绮贞](http://www.jianshu.com/u/5a89cd7d45c9)<br>
 文章：[51 cto ](http://www.techweb.com.cn/network/system/2016-10-11/2407736.shtml)
