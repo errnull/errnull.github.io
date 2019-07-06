@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 个人博客搭建（Jekyll + Github Page + 域名关联）
-date: 2016-05-20 
+date: 2016-5-20
 tags: BlogCourse   
 ---
 <br><br>
